@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEE Pro | Professional Home Improvement & Contracting Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a3a5c;
+            --accent-blue: #2d5a87;
+            --highlight-yellow: #f4c542;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .logo span:first-child {
+            color: var(--primary-blue);
+        }
+
+        .logo span:last-child {
+            background: var(--highlight-yellow);
+            color: var(--primary-blue);
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .cta-button {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: var(--white);
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--highlight-yellow);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-cta .cta-button {
+            background: var(--highlight-yellow);
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+        }
+
+        .hero-cta .cta-button:hover {
+            background: #e5b733;
+        }
+
+        .hero-cta .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .hero-cta .cta-secondary:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .promo-banner {
+            background: var(--highlight-yellow);
+            color: var(--primary-blue);
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 3rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* Trust Badges */
+        .trust-section {
+            background: var(--light-gray);
+            padding: 3rem 2rem;
+        }
+
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .trust-badge svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--accent-blue);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-category {
+            margin-bottom: 4rem;
+        }
+
+        .services-category h3 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--highlight-yellow);
+            display: inline-block;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .service-card h4 {
+            color: var(--primary-blue);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--accent-blue);
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 6rem 2rem;
+        }
+
+        .why-us .section-header h2 {
+            color: var(--white);
+        }
+
+        .why-us .section-header p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .why-us-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-us-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .why-us-item .icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .why-us-item .icon svg {
+            width: 35px;
+            height: 35px;
+            fill: var(--highlight-yellow);
+        }
+
+        .why-us-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .why-us-item p {
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: var(--light-gray);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial blockquote {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .testimonial cite {
+            font-style: normal;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .phone-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--highlight-yellow);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .contact-cta .cta-button {
+            background: var(--highlight-yellow);
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            padding: 1.2rem 2.5rem;
+        }
+
+        .free-estimate {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a2a3a;
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-badges span {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .phone-number {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span>BEE</span><span>PRO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:716-545-4454" class="cta-button">Call Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Transform Your Home <span>This Season</span></h1>
+        <p>Your trusted local contracting partner for professional painting, exterior care, and complete home remodeling. We bring expertise, integrity, and craftsmanship to every project.</p>
+        <div class="hero-cta">
+            <a href="tel:716-545-4454" class="cta-button">Get Your Free Estimate</a>
+            <a href="#services" class="cta-button cta-secondary">Explore Services</a>
+        </div>
+        <div class="promo-banner">Book This Week & Save 10%!</div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                <span>Licensed & Insured</span>
+            </div>
+            <div class="trust-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>EPA Certified</span>
+            </div>
+            <div class="trust-badge">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.59L18 11l-6 6z"/></svg>
+                <span>BBB Accredited</span>
+            </div>
+            <div class="trust-badge">
+                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <span>Trusted Builders</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Professional Services</h2>
+            <p>From refreshing your home's exterior to complete interior renovations, we deliver quality craftsmanship on every project.</p>
+        </div>
+
+        <!-- Exterior Services -->
+        <div class="services-category">
+            <h3>Professional Painting & Exterior Care</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></svg>
+                    </div>
+                    <h4>Interior & Exterior Painting</h4>
+                    <p>Transform any space with our professional painting services. We use premium paints and meticulous preparation techniques to deliver flawless, long-lasting finishes for walls, ceilings, trim, and exteriors. Our color consultation service helps you choose the perfect palette for your home.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 9.3V4h-3v2.6L12 3 2 12h3v8h5v-6h4v6h5v-8h3l-3-2.7z"/></svg>
+                    </div>
+                    <h4>Decks</h4>
+                    <p>Create the perfect outdoor living space with a custom-built deck. Whether you're looking for a cozy retreat or an expansive entertainment area, we design and construct durable, beautiful decks using quality materials that withstand the elements year after year.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                    </div>
+                    <h4>Fences & Pergolas</h4>
+                    <p>Define your property with style and security. Our fence installations provide privacy, safety, and curb appeal, while our custom pergolas create elegant outdoor structures perfect for shade, entertaining, or simply enjoying your backyard in comfort.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z"/></svg>
+                    </div>
+                    <h4>Power Washing</h4>
+                    <p>Restore your home's exterior surfaces to their original beauty. Our professional power washing removes years of dirt, grime, mold, and mildew from siding, driveways, patios, decks, and walkways, instantly improving your home's appearance and protecting surfaces from damage.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12.5 6.9c1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-2.06.45-3.72 1.83-3.72 3.94 0 2.51 2.01 3.76 4.93 4.5 2.61.66 3.14 1.64 3.14 2.67 0 .76-.54 1.98-2.85 1.98-2.18 0-3.04-1.02-3.15-2.25H7.1c.13 2.35 1.88 3.68 3.9 4.13V22h3v-2.16c2.06-.5 3.72-2.01 3.72-4.11 0-3.09-2.55-4.15-4.93-4.83-2.37-.68-2.79-1.67-2.79-2.7 0-.74.61-1.9 2.5-1.9z"/></svg>
+                    </div>
+                    <h4>Staining & Wood Restoration</h4>
+                    <p>Bring weathered wood back to life and protect it for years to come. Our staining and restoration services enhance the natural beauty of decks, fences, siding, and outdoor furniture while providing essential protection against moisture, UV damage, and wear.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 12h-2v3h-3v2h5v-5zM7 9h3V7H5v5h2V9zm14-6H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16.01H3V4.99h18v14.02z"/></svg>
+                    </div>
+                    <h4>Concrete</h4>
+                    <p>From patios and walkways to driveways and foundations, our concrete services deliver durable, attractive results. We handle new installations, repairs, and decorative finishes including stamped and stained concrete to enhance your property's functionality and appeal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                    </div>
+                    <h4>Pavers & Deck Sealing</h4>
+                    <p>Protect your investment with professional sealing services. We apply high-quality sealants to pavers, decks, and outdoor surfaces that guard against staining, fading, and weather damage while enhancing colors and extending the life of your hardscaping and wood structures.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interior Services -->
+        <div class="services-category">
+            <h3>Interior Remodeling</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 2.01L6 2c-1.1 0-2 .89-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.11-.9-1.99-2-1.99zM18 20H6v-9.02h12V20zm0-11H6V4h12v5z"/></svg>
+                    </div>
+                    <h4>Kitchen Renovations</h4>
+                    <p>Create the kitchen of your dreams with our comprehensive renovation services. From modern cabinet installations and elegant backsplashes to new flooring and countertops, we transform outdated kitchens into functional, beautiful spaces where your family will love to gather.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 3v2H2v2h7v2h4V3H9zm4 7H2v2h11v-2zm-4 7H2v2h7v-2zm0 0v2h4v-4H9v2z"/></svg>
+                    </div>
+                    <h4>Bathroom Remodeling</h4>
+                    <p>Transform your bathroom into a personal retreat. Our full-service bathroom renovations include tile work, vanity installation, shower and tub upgrades, and complete layout redesigns. We handle everything from minor updates to complete gut renovations with attention to every detail.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 20H4v-4h4v4zm0-6H4v-4h4v4zm0-6H4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4z"/></svg>
+                    </div>
+                    <h4>Basement Finishing</h4>
+                    <p>Unlock the hidden potential of your basement. We specialize in basement finishing, waterproofing, and creative layout conversions that transform unused space into comfortable living areas, home offices, entertainment rooms, or whatever your family needs most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-us">
+        <div class="section-header">
+            <h2>Why Choose BEE Pro?</h2>
+            <p>We're not just contractors—we're your neighbors committed to excellence.</p>
+        </div>
+        <div class="why-us-grid">
+            <div class="why-us-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </div>
+                <h4>Licensed & Fully Insured</h4>
+                <p>Your protection is our priority. We carry comprehensive insurance and all required licenses, giving you peace of mind throughout every project.</p>
+            </div>
+            <div class="why-us-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <h4>Clean, Respectful Crew</h4>
+                <p>Our professional team treats your home with care. We maintain clean work areas, protect your belongings, and respect your family's daily routine.</p>
+            </div>
+            <div class="why-us-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                </div>
+                <h4>Fast Scheduling</h4>
+                <p>We value your time. Our efficient scheduling system gets your project started quickly, and we communicate clearly about timelines from start to finish.</p>
+            </div>
+            <div class="why-us-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                </div>
+                <h4>Free Color Consultation</h4>
+                <p>Not sure which colors or finishes to choose? Our complimentary consultation helps you select the perfect options to complement your home's style.</p>
+            </div>
+            <div class="why-us-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                </div>
+                <h4>Free On-Site Estimates</h4>
+                <p>No pressure, no obligation. We provide detailed, transparent estimates at your home so you can make informed decisions about your project.</p>
+            </div>
+            <div class="why-us-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <h4>Quality Guaranteed</h4>
+                <p>We stand behind our work with confidence. Our commitment to quality materials and expert craftsmanship ensures results that last for years to come.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <div class="testimonial-content">
+            <blockquote>"Amazing work, clear communication, and on time."</blockquote>
+            <cite>— Local Homeowner</cite>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get answers to common questions about our services and process.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I get started with a project?</div>
+            <p class="faq-answer">Getting started is easy! Simply call us at 716-545-4454 or fill out our contact form to schedule your free on-site estimate. We'll visit your home, discuss your vision, assess the scope of work, and provide a detailed, no-obligation quote. There's never any pressure—we want you to feel confident in your decision.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Are you licensed and insured?</div>
+            <p class="faq-answer">Absolutely. BEE Pro is fully licensed and carries comprehensive liability insurance to protect you, your home, and our team. We're also EPA certified for lead-safe work practices and proud to be BBB accredited. We're happy to provide proof of insurance upon request.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How long will my project take?</div>
+            <p class="faq-answer">Project timelines vary based on scope and complexity. A typical interior paint job might take 2-5 days, while a full kitchen renovation could take several weeks. During your estimate, we'll provide a realistic timeline and keep you informed throughout the process. We pride ourselves on completing projects on schedule without sacrificing quality.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What areas do you serve?</div>
+            <p class="faq-answer">We proudly serve homeowners throughout the greater Buffalo area and surrounding communities. If you're unsure whether you're in our service area, give us a call—we're always happy to discuss your project.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you offer financing options?</div>
+            <p class="faq-answer">We understand that home improvements are a significant investment. Contact us to discuss payment options that work for your budget. We're committed to making quality home improvement accessible to all homeowners.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What makes BEE Pro different from other contractors?</div>
+            <p class="faq-answer">We combine professional expertise with genuine care for our customers. Our team consists of skilled craftsmen who treat every home as if it were their own. We communicate clearly, show up on time, maintain clean work areas, and stand behind our work. Our EPA certification and BBB accreditation reflect our commitment to the highest standards in the industry.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can you help me choose colors and materials?</div>
+            <p class="faq-answer">Yes! We offer complimentary color consultations as part of our service. Our experienced team can help you select paint colors, stain finishes, materials, and design elements that complement your home's architecture and your personal style. We'll bring samples and provide expert guidance to help you make confident choices.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What if I'm not satisfied with the work?</div>
+            <p class="faq-answer">Your satisfaction is our top priority. We maintain open communication throughout every project and conduct a final walkthrough with you to ensure everything meets your expectations. If any issues arise, we address them promptly and professionally. Our reputation is built on happy customers, and we're committed to earning your trust and referrals.</p>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="contact-cta">
+        <h2>Ready to Transform Your Home?</h2>
+        <p>Get your free, no-pressure estimate today.</p>
+        <a href="tel:716-545-4454" class="phone-number">716-545-4454</a>
+        <a href="tel:716-545-4454" class="cta-button">Call Now & Save 10%</a>
+        <p class="free-estimate">Free On-Site Estimate • No Pressure Ever!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-badges">
+                <span>Licensed & Insured</span>
+                <span>EPA Certified</span>
+                <span>BBB Accredited</span>
+            </div>
+            <p>&copy; 2026 BEE Pro. All rights reserved. Your Trusted Local Contracting Partner.</p>
+        </div>
+    </footer>
+</body>
+</html>
