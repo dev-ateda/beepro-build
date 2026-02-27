@@ -1,0 +1,8 @@
+{
+  "name": "beepro-build",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "npx wrangler pages deploy . --project-name=beepro-build"
+  }
+}
